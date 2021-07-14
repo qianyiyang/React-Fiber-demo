@@ -11,7 +11,7 @@ export default {
                 ref: null,
                 props: {
                     id: "B1",
-                    className: "B11",
+                    className: "B1",
                     children: [
                         {
                             type: "div",
@@ -28,7 +28,7 @@ export default {
                             key: null,
                             ref: null,
                             props: {
-                                id: "C11",
+                                id: "C2",
                             },
                             _owner: null,
                             _store: {},
@@ -44,17 +44,7 @@ export default {
                 ref: null,
                 props: {
                     id: "B2",
-                    className: "B11",
-                    children: {
-                        type: "div",
-                        key: null,
-                        ref: null,
-                        props: {
-                            id: "C2",
-                        },
-                        _owner: null,
-                        _store: {},
-                    },
+                    className: "B2",
                 },
                 _owner: null,
                 _store: {},
