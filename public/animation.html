@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div
+            id="div"
+            style="width: 0; height: 50px; background-color: #40a9ff"
+        ></div>
+        <button id="button">开始</button>
+    </body>
+
+    <script>
+        let button = document.getElementById("button");
+        let div = document.getElementById("div");
+
+        let start = 0;
+        let intervalTime = [];
+
+        const progress = () => {
+            div.style.width = div.offsetWidth + 1 + "px";
+            div.innerHTML = div.offsetWidth + "%";
+            if (div.offsetWidth < 100) {
+                let current = Date.now();
+                intervalTime.push(current - start);
+                start = current;
+                requestAnimationFrame(progress);
+            } else {
+                console.log(intervalTime); // 打印requestAnimationFrame的全部时间间隔
+            }
+        };
+
+        button.onclick = () => {
+            div.style.width = 0;
+            let currrent = Date.now();
+            start = currrent;
+            requestAnimationFrame(progress);
+        };
+    </script>
+</html>
